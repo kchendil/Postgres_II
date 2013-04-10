@@ -17,9 +17,9 @@ template "/tmp/rbpm_postgresql_install.properties" do
 end
 
 
-execute "Install EAS" do
+execute "Install Postgres" do
   command " \"#{postgres_build_loc}\" -i silent -f \"/tmp/rbpm_postgresql_install.properties\" "  
-  creates "/opt/novell/sentinel_eas/EASInstall.log"
+  creates "#{postgres_install_loc}/JBossPostgreSQL_InstallLog.log"
   action :run
   
 end
