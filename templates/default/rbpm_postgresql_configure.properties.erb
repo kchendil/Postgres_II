@@ -1,0 +1,32 @@
+
+#Choose Install Set
+#------------------
+# This should match the CHOSEN_INSTALL_SET
+# It can be JBoss, PostgreSQL or Jboss,PostgreSQL
+CHOSEN_INSTALL_FEATURE_LIST=PostgreSQL
+CHOSEN_INSTALL_SET=PostgreSQL
+
+# Choose to install only, do not 
+# configure the databases.
+# Se value to 1, if install only
+# Set Value to 0, if configure
+# Default = 0 
+NOVL_CONFIGURE_ONLY=0
+
+
+# Select PostgreSQL Parent Folder
+# For Windows, use \\ for paths
+# USER_MAGIC_FOLDER_1=c:\\opt\\novell\\idm\\Postgres
+USER_MAGIC_FOLDER_1=<%= node["postgres"]["postgres_install_loc"] %>
+
+#PostgreSQL Database params
+NOVL_DB_NAME=<%= node["postgres"]["dbname"] %>
+NOVL_DB_USERNAME=<%= node["postgres"]["username"] %>
+NOVL_DB_PASSWORD=<%= node["postgres"]["password"] %>
+NOVL_DB_PASSWORD_CONFIRM=<%= node["postgres"]["password"] %>
+NOVL_DB_PORT=<%= node["postgres"]["port"] %>
+
+#START_DB=START
+NOVL_USE_INSTALLED_POSTGRES=not installed
+NOVL_INSTALL_POSTGRES=0
+NOVL_DB_PSQL_PORT=5432

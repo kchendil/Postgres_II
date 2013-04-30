@@ -20,3 +20,7 @@
 
 default['postgres']['postgres_install_loc'] = "/opt/novell/idm/rbpm/postgresql"
 default['postgres']['postgres_build_loc'] = "/home/vagrant/IDM402AE/test/products/RBPM/JBossPostgreSQL.bin"
+default['postgres']['port'] = "5432"
+default['postgres']['dbname'] = "idmuserappdb"
+default['postgres']['username'] = "idmadmin"
+default['postgres']['password'] = "n"
