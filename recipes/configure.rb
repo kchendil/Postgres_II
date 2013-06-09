@@ -11,7 +11,7 @@ postgres_install_loc=node['postgres']['postgres_install_loc']
 postgres_build_loc=node['postgres']['postgres_build_loc']
 
 template "/tmp/rbpm_postgresql_configure.properties" do
-  source "rbpm_postgresql_install.properties.erb"
+  source "rbpm_postgresql_configure.properties.erb"
   owner "root" 
   mode "0644"  
 end
