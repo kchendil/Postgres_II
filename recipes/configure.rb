@@ -19,6 +19,7 @@ end
 
 execute "Configure Postgres" do
   command " \"#{postgres_build_loc}\" -i silent -f \"/tmp/rbpm_postgresql_configure.properties\" "  
+  creates "/opt/novell/idm/rbpm/postgresql/Config_JBossPostgreSQL.log"
   action :run
   
 end
